@@ -1,5 +1,7 @@
 # Productivity Roulette
 
+https://ezbutd.github.io/productivity-roulette/
+
 **Make progress. Change your chances.** A static roulette wheel for hobby productivity sprints with friends, built with plain HTML, CSS, and JavaScript. No accounts, backend, dependencies, or build step.
 
 ## Why this exists
