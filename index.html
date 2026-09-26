@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f3ec">
+    <meta name="description" content="A little progress. Better odds. A roulette wheel for hobby sprints with friends.">
+    <title>Productivity Roulette</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href="./"><span class="brand-icon" aria-hidden="true">✳</span> productivity roulette</a><span class="header-note">MAKE A LITTLE PROGRESS.</span></header>
+    <main>
+      <noscript><p>This wheel needs JavaScript to shuffle tiles and spin. Enable JavaScript in your browser to use it.</p></noscript>
+      <div class="intro"><span class="eyebrow"><span class="tiny-dot"></span> SMALL STEPS, BETTER ODDS</span><h1>Make progress.<br><em>Change your chances.</em></h1><p>A little motivation for the things you want to make time for.<br class="desktop-break"> Build your wheel, put in the work, and let it spin.</p></div>
+      <div class="workspace">
+        <section class="settings card" aria-labelledby="setup-title">
+          <div class="section-heading"><span class="step">01</span><h2 id="setup-title">Build your wheel</h2></div>
+          <p class="section-description">Set the stakes for your next hobby sprint.</p>
+          <div class="tile-input bad"><label for="bad"><span class="tile-symbol" aria-hidden="true">×</span><span>Bad tiles<small>A little incentive to show up</small></span></label><input id="bad" type="number" min="0" max="200" step="1" value="8" inputmode="numeric"></div>
+          <div class="tile-input neutral"><label for="neutral"><span class="tile-symbol" aria-hidden="true">−</span><span>Neutral tiles<small>Nothing owed. Progress earned.</small></span></label><input id="neutral" type="number" min="0" max="200" step="1" value="3" inputmode="numeric"></div>
+          <div class="tile-input good"><label for="good"><span class="tile-symbol" aria-hidden="true">✦</span><span>Good tiles<small>A reward from a friend</small></span></label><input id="good" type="number" min="0" max="200" step="1" value="1" inputmode="numeric"></div>
+          <p id="validation" class="validation" role="alert"></p>
+          <div class="total-line"><span>Total tiles</span><strong id="total">12</strong></div>
+          <details><summary>Give the stakes a name <span>optional</span></summary><div class="notes"><label for="consequence">Bad outcome<input id="consequence" maxlength="160" placeholder="e.g. Take on the next cleanup"></label><label for="reward">Sponsored reward<input id="reward" maxlength="160" placeholder="e.g. A coffee, courtesy of Alex"></label><p>Agree on the stakes together before your sprint.</p></div></details>
+          <div class="progress-box"><div><span class="eyebrow">EVERY STEP COUNTS</span><h3>Put your progress on the wheel.</h3><p>Finished a little of your goal? Turn one bad tile into a neutral tile.</p></div><button id="progress" class="secondary-button">＋ Log progress <span>bad → neutral</span></button></div>
+        </section>
+        <section class="wheel-panel" aria-label="Roulette wheel">
+          <div class="wheel-topline"><span class="eyebrow">A LITTLE CHANCE. A LOT OF POSSIBILITY.</span><button id="shuffle" class="text-button" title="Randomize the order of the tiles">↻ Shuffle tiles</button></div>
+          <div class="wheel-wrap"><div class="pointer" aria-hidden="true"></div><svg id="wheel" viewBox="0 0 500 500" role="img" aria-label="Roulette wheel"></svg><div class="wheel-hub" aria-hidden="true"><span>SMALL STEPS</span><b>✳</b><span>BETTER ODDS</span></div></div>
+          <div class="odds" aria-label="Outcome probabilities"><span><i class="bad-dot"></i>Bad <strong id="bad-odds"></strong></span><span><i class="neutral-dot"></i>Neutral <strong id="neutral-odds"></strong></span><span><i class="good-dot"></i>Good <strong id="good-odds"></strong></span></div>
+          <button id="spin" class="spin-button">Spin the wheel <span aria-hidden="true">↗</span></button>
+          <div id="result" class="result" role="status" aria-live="polite"><strong>Your next chapter is a spin away.</strong><span>Each tile has an equal chance of being picked.</span></div>
+        </section>
+      </div>
+      <section class="how-it-works" aria-labelledby="how-title"><div><span class="eyebrow">A SPRINT WITH FRIENDS</span><h2 id="how-title">Less all-or-nothing.<br>More one step at a time.</h2></div><div><span class="how-number">01 / SET A GOAL</span><p>Pick a timeframe and a small, repeatable goal. </p></div><div><span class="how-number">02 / CHANGE THE ODDS</span>
+        <p>Each day of progress turns a bad outcome into a neutral one. Friends can sponsor good tiles to cheer you on. </p>
+      </div><div><span class="how-number">03 / LET IT SPIN</span><p>At the end of the sprint, everyone spins their own wheel! </p></div></section>
+    </main>
+    <footer><span>Made for hobbies. Better with friends.</span><span>Every little bit moves you forward. <span aria-hidden="true">✳</span></span></footer>
+  </body>
+</html>
